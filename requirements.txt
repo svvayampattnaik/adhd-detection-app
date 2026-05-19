@@ -1,9 +1,0 @@
-streamlit
-numpy
-scikit-learn
-gensim
-tensorflow
-transformers
-torch
-lime
-nltk
