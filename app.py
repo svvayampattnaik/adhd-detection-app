@@ -24,6 +24,7 @@ MODEL_FILES = {
 # ── Imports ──
 import nltk
 nltk.download('stopwords', quiet=True)
+nltk.download('punkt', quiet=True)
 from nltk.corpus import stopwords
 from gensim.models import Word2Vec
 from sklearn.feature_extraction.text import TfidfVectorizer
