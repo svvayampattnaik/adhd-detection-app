@@ -34,12 +34,12 @@ def clean_text(text):
 @st.cache_resource
 def load_models():
     from gensim.models import Word2Vec
-    import tensorflow as tf
+    import keras
     svm_tfidf = pickle.load(open('svm_model.pkl', 'rb'))
     vectorizer = pickle.load(open('vectorizer.pkl', 'rb'))
     svm_w2v = pickle.load(open('svm_w2v_model.pkl', 'rb'))
     w2v_model = Word2Vec.load('w2v_model.bin')
-    lstm_model = tf.keras.models.load_model('lstm_model.h5')
+    lstm_model = keras.models.load_model('lstm_model.h5')
     return svm_tfidf, vectorizer, svm_w2v, w2v_model, lstm_model
 
 @st.cache_resource
